@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Companies</title>
+</head>
+<style>
+    table{
+        margin: auto;
+        overflow: hidden;
+        position: inherit;
+        width: 50%;
+        text-align: center;
+        background-color:rgb(130, 227, 197);
+        border-radius: 10px;
+        border: "1px";
+        border-color:"1px solid black";
+    }
+    .heading{
+        text-align: center;
+        color: white;
+    }
+    body{
+        text-align: center;
+        background-color:dimgrey;
+        margin: 10px;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    
+    <h2 class="heading">Profile</h2>
+    
+        
+<table >
+    <% if(joined.length > 0){%>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Marks</th>
+            <th>CGPA</th>
+            <th>Backlogs</th>
+            <th>Domain</th>
+        </tr>
+        <% for(var i = 0; i < joined.length-1; i++){ %>
+            <tr>
+                <td><%= joined[0][i].name %></td>
+                <td><%= joined[0][i].email %></td>
+                <td><%= joined[0][i].marks %></td>
+                <td><%= joined[0][i].cgpa %></td>
+                <td><%= joined[0][i].backlogs %></td>
+                <td><%= joined[0][i].domain %></td>
+
+            </tr>
+        <% } %>
+    <% } else { %>
+        <h4>No records found.</h4>
+    <% } %>            
+</table>
+
+<br><br>
+<h2 style="color: white;">Here are the companies you can Approach</h2>
+<table >
+    <% if(joined.length > 0){%>
+        <tr>
+            <th>Company Name</th>
+            <th>Company Link</th>
+        </tr>
+        <% for(var i = 1; i < joined.length; i++){ %>
+            <% for(var j = 0; j < joined[1].length; j++){ %>
+                <tr>
+                    <td><%= joined[1][j].company_name %></td>
+                    <td><%= joined[1][j].company_link %></td>
+                </tr>
+            <% } %>
+        <% } %>
+    <% } else { %>
+        <h4>No records found.</h4>
+    <% } %>            
+</table>
+
+
+</body>
+</html>

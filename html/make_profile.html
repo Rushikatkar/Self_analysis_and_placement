@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKE PROFILE</title>
+</head>
+<style>
+    input[type="number"]{
+        width: 100%;
+    }
+    body{
+        background-color:whitesmoke;
+        
+    }
+    form{
+        width: 300px;
+        border: 15px  rgb(130, 227, 197);
+        padding: 50px;
+        margin: auto;
+        margin-top: 10%;
+        box-shadow: 0 0 10px 0 #000;
+        border-radius: 1rem;
+        background-color: rgb(130, 227, 197);
+
+    }
+
+    input[type="number"],input[type="email"],input[type="text"],input[type="password"]{
+        padding: 10px;
+        margin: auto;
+        border-radius: 5px;
+        border: hidden;
+        
+        width: 100%;
+        overflow: hidden;
+        
+    }
+    input[type="submit"]{
+        background-color: rgb(33, 218, 33);
+        width: 100%;
+        margin: auto;
+        border-radius: 5px;
+        padding: 10px;
+        border: hidden;
+    }
+
+
+
+    .main{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .navbar{
+        width: 100%;
+        height: 75px;
+        margin: auto;
+        background-color:dimgrey;
+    }
+    .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+    }
+    .logo{
+    
+        color: white;
+        font-size: 25px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        margin-right:80px;
+        padding-top: 10px;
+        margin-top: 10px
+      }
+      *{
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+        width: 700px;
+        float: right;
+        height: 70px;
+        text-emphasis-color: black;
+        justify-content: center;
+        
+    }
+    ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+    }
+    ul li a{
+        text-decoration: none;
+        color:black;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+    ul li a:hover{
+        color: #ff7200;
+    }
+    .link_main{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <h3 class="logo" behavior="scroll" direction="LEFT" scrollamount="1"> <a href="/sap" class="link_main">SELF&nbsp;ANALYSIS&nbsp;&amp;&nbsp;PLACEMENT</a></h3>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <!-- <li><a href="/sap">HOME</a></li> -->
+                <!-- <li><a href="#">CONTACTS</a></li> -->
+                <li><a href="/login" style="color: white;">LOGIN</a></li>
+                <li><a href="/Profile"style="color: white;">REGISTER</a></li>
+                <!-- <li><a href="/signup"style="color: white;">REGISTER</a></li> -->
+                <li><a href="/searching"style="color: white;">SEARCH COMPANY</a></li>
+            </ul>
+        </div>
+       
+
+    </div> 
+    <div class="container">
+        <form action="" method="post">
+            <h2 style="text-align:center;">Make profile</h2>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            
+            <label for="marks">12th Marks</label>
+                <input type="number" name="marks" id="marks" placeholder="Marks" required>
+                <h3></h3>
+                <label for="cgpa">CGPA</label>
+                <input type="number" name="cgpa" id="cgpa" placeholder="CGPA" required>
+                <h3></h3>
+                <label for="backlog">Backlogs</label>
+                <input type="number" name="backlogs" id="backlog" placeholder="Backlogs" required>
+                <h3></h3>
+                <!-- <select name="branch" id="branch">
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="Diploma">Diploma</option>
+                </select> -->
+                <label for="domain">Domain</label>
+                <input type="text" name="domain" id="domain" placeholder="e.g. = Web Development" required>
+                <h3></h3>
+                <input type="submit" value="Submit">
+                
+        </form>
+
+    </div>
+</body>
+</html>

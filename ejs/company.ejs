@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Companies</title>
+</head>
+<style>
+    table{
+        margin: auto;
+        overflow: hidden;
+        position: inherit;
+        width: 50%;
+        text-align: center;
+        background-color:rgb(130, 227, 197);
+        border-radius: 10px;
+        border: "1px";
+        border-color:"1px solid black";
+    }
+    .heading{
+        text-align: center;
+        color: white;
+    }
+    body{
+        text-align: center;
+        background-color:dimgrey;
+        margin: 10px;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    
+    <h2 class="heading">List of Companies</h2>
+    <table >
+        <tr>
+            <th>Company name</th>
+            <th>Company link</th>
+        </tr>
+        <% if(company.length > 0){ %>
+            <% for(var i=0; i<company.length; i++){ %>
+                <tr>
+                    <td> <%- company[i].company_name %> </td>
+                    <td><a href="https://careers.google.com/" target="_blank"><%- company[i].company_link %></a> </td>
+                </tr>
+                <% } %>
+            <% }else{ %>
+                <h1>You are not eligible for any Company</h1>
+                <% } %>
+                <tr>
+                    
+                    
+                </tr>       
+    </table>
+</body>
+</html>

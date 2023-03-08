@@ -1,0 +1,712 @@
+<html>
+ <head>       
+       <title>SELF ANALYSIS & PLACEMENT</title>
+       <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#dropdown{
+    margin-left: 0px !important;
+}
+ol{
+    width:300px !important;
+}
+
+.main{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    
+}
+.navbar{
+    width: 100%;
+    height: 75px;
+    margin: auto;
+    background-color: rgb(65, 59, 59);
+    
+}
+.icon{
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+.logo{
+    color: #8000ff;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    margin-right:80px;
+    padding-top: 10px;
+    margin-top: 5px
+}
+.menu{
+    width: 700px;
+    float: right;
+    height: 70px;
+    text-emphasis-color: black;
+    
+}
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a{
+    text-decoration: none;
+    color:black;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+ul li a:hover{
+    color: #ff7200;
+}
+.search{
+    width: 330px;
+    float: right;
+    margin-left: 270px;
+   
+}
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    margin-top: 13px;
+    color:#000;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #ff7200;
+    border: 2px solid #ff7200;
+    margin-top: 13px;
+    color: blueviolet;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #000;
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color:  black;
+    position: relative;
+}
+.content h1{
+    font-family:sans-serif;
+    font-size: 0px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+    text-align: center;
+    color: none;
+}
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    margin-top: 300px;
+    
+}
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
+.cn:hover{
+    background-color: rgb(37, 171, 66);
+}
+.content span{
+    color:black;
+    font-size:0px
+}
+.form{
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position:absolute;
+    top: -20px;
+    left: 1010px;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #936cdb;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form input:focus{
+    outline: none;
+}
+::placeholder{
+    color: #fff;
+    font-family: Arial;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: #5406b4;
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover{
+    background: #fff;
+    color: #df1789;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
+.form .link a{
+    text-decoration: none;
+    color: white;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: rgb(10, 158, 10);
+}
+.icons ion-icon{
+    color: rgb(51, 25, 219);
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    /* transition: 0.3s ease; */
+}
+.icons ion-icon:hover{
+    color: #ff7200;
+}
+
+
+@media screen and (max-width:1200px) {
+    /*Normal Screen*/
+
+    .navbar{
+        width: 100%;
+        height: 100px;
+    }
+    ul{
+        margin-left: 10px;
+    }   
+    ul li{
+        margin-left: 50px;
+    }
+    ul li a{
+       font-size: 1.6vw; 
+    }
+    .search{
+        margin-top: 3px;
+        margin-left: 390px;
+    }
+    .srch{
+        height: 40px;
+        width: 190px;
+        font-size: 14px;
+    }
+    .btn{
+        height:40px;
+        width: 80px;
+    }
+    .content{
+        width: 100%;
+    }
+    .content h1, .content span{
+        font-size: 4.5vw; 
+    }
+    .content .par{
+        width: 90%;
+        font-size: 1.5vw;
+    }
+    .content .cn{
+        width: 13%;
+        height: 3.5vw;
+        font-size: 1.8vw;
+    }
+    .content a{
+        font-size: 1.6vw
+    }
+}
+
+@media screen and (max-width:1170px) {
+    /*Login-box*/
+    .main{
+        padding-left: 20px;
+        height: 180vh;
+    }
+    .form{
+        margin-left: -30px;
+        width: 250px;
+        height: 370px;
+        background: linear-gradient(to top, rgba(0,0,0,0.8))(50%,rgba(0,0,0,0.8)50%);
+        position:absolute;
+        top: 420px;
+        left: 50px;
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .form input{
+        width: 240px;
+        height: 35px;
+        background: transparent;
+        border-bottom: 1px solid #ff7200;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        font-family: sans-serif;
+    }
+    .btnn a{
+        font-size: 16px;
+    }
+    .form .link a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    /*For tablet*/
+   
+    .content{
+        margin-top: 120px;
+        width: 70%;   
+        margin-left: 130px;  
+    }
+    .content h1, .content span{
+        font-size: 6vw; 
+    }
+    .content .par{
+        width: 90%;
+        font-size: 1.8vw;
+       text-emphasis-color: rgb(72, 4, 181); 
+    }
+    .content .cn{
+        width: 15%;
+        height: 4.5vw;
+        font-size: 2vw;
+    }
+    .content a{
+        font-size: 2vw
+    }
+    .logo{
+        margin-left: 240px;
+        width: 100%;
+        margin-top: 15px;
+        font-size: 5vw;
+    }
+    .menu{
+        width: 100%;
+    }
+    ul{
+        margin-top: -5px;
+        margin-left: 5px;
+    }
+    ul li{
+        margin-left: 60px;
+    }
+    ul li a{
+       font-size: 2vw; 
+    }
+    .search{
+        margin-top: -20px;
+        margin-left: 60px;   
+    }   
+    .srch{
+        height: 30px;
+        width: 160px;
+        font-size: 12px;
+    }
+    .btn{
+        height:30px;
+        width: 70px;
+    }
+    .main{
+        padding-left: 20px;
+        height: 180vh;
+    }
+    .form{
+        margin-left: -30px;
+        width: 250px;
+        height: 370px;
+        background-image: linear-gradient(to right, rgba(65, 10, 214, 0), rgba(255,0,0,1));
+        position: absolute;
+        top: 430px;
+        left: 50px;
+        transform: translate(0%,-5%);
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .form input{
+        width: 240px;
+        height: 30px;
+        background: transparent;
+        border-bottom: 1px solid #ff7200;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        font-family: sans-serif;
+    }
+    .btnn a{
+        font-size: 16px;
+    }
+    .form .link a{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    /*IPAD*/
+    
+    .content{
+        margin-top: 80px;
+        margin-left: 20px;
+    }
+    .search{
+        margin-top: -40px;
+        margin-left: 42px;
+    }
+    .logo{
+        margin-left: 180px;
+        font-size: 4vw;
+    }
+    ul{
+        margin-top: -25px;
+        margin-left: -5px;
+    }
+    ul li {
+        margin-left: 50px;
+    }
+    ul li a{
+        font-size: 2vw;
+    }   
+}
+
+@media screen and (max-width: 450px){
+    /*mobile*/
+    .logo{
+        margin-left: 140px;
+        font-size: 4vw;
+    }
+    ul{
+        margin-top: -25px;
+    }
+    ul li {
+        margin-left: 42px;
+    }
+    ul li a{
+        font-size: 2vw;
+    }  
+    .search{
+        margin-top: -40px;
+        margin-left: 38px;
+    } 
+    .container {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: left;
+        align-items: left;
+        border: 3px dashed black;
+        width: 300px;
+        height: 300px;
+      }
+      
+      .container>div>video {
+        width: 300px;
+        height: 300px;
+      }
+}
+.dropbtn {
+    color:black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }  
+  .form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #936cdb;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 4px;
+    padding: 8px;
+
+  }
+  .logo{
+    
+    color: white;
+    font-size: 25px;
+    font-family: Arial;
+    padding-left: 20px;
+    float: left;
+    margin-right:80px;
+    padding-top: 10px;
+    margin-top: 10px
+  }
+  
+  input[type="number"]{
+    width: 100%;
+}
+body{
+    background-color:rgb(232, 230, 218);
+    background:rgba(0,0,0,0.55)url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+form{
+    width: 300px;
+    border: 15px  rgb(130, 227, 197);
+    padding: 50px;
+    margin: auto;
+    margin-top: 2%;
+    box-shadow: 0 0 10px 0 #000;
+    border-radius: 1rem;
+    background-color: rgb(130, 227, 197);
+
+}
+
+input[type="number"]{
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    border: hidden;
+    
+    width: 100%;
+    overflow: hidden;
+    
+}
+input[type="submit"]{
+    background-color: rgb(33, 218, 33);
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: hidden;
+}
+.navbar-1{
+    background-color: black;
+    color: white;
+    margin: 6px;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.link_main{
+    color: white;
+    text-decoration: none;
+}
+.cote{
+    color: white;
+}
+.footer{
+    
+    
+    width: 100%;
+}
+  table{
+    width: 100%;
+    text-align: center;
+    background-color: rgb(65, 59, 59);
+    color: white;
+    text-decoration: none;
+  }
+  .atag{
+    text-decoration: none;
+    color: white;
+  }
+  .sec_company{
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+       </style>
+       <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" > -->
+  </head>
+       <!-- <body style="background-image:url('http://www.s3jobs.in/images/Banner_2.png');"> -->
+        <body>
+         <div class="main">
+             <div class="navbar">
+                 <div class="icon">
+                     <h3 class="logo" behavior="scroll" direction="LEFT" scrollamount="1"> <a href="/sap" class="link_main">SELF&nbsp;ANALYSIS&nbsp;&amp;&nbsp;PLACEMENT</a> </h3>
+                 </div>
+     
+                 <div class="menu">
+                     <ul>
+                         <!-- <li><a href="/sap">HOME</a></li> -->
+                         <!-- <li><a href="#">CONTACTS</a></li> -->
+                         <li><a href="/login" style="color: white;">LOGIN</a></li>
+                         <li><a href="/Profile"style="color: white;">REGISTER</a></li>
+                         <!-- <li><a href="/signup"style="color: white;">REGISTER</a></li> -->
+                         <li><a href="/searching"style="color: white;">SEARCH COMPANY</a></li>
+                     </ul>
+                 </div>
+                
+     
+             </div> 
+            <br>
+         </div>
+         <div class="cote">
+            <h1 style="text-align:center ;">WELCOME!</h1>
+            <h2 style="text-align:center ;">Analyse Yourself According Companies Criterias</h2>
+          </div> 
+         <div class="container">
+            <form action="" method="post">
+                <h2 style="text-align: center;">Enter Your Details</h2>
+                <label for="marks">12th Science Marks</label>
+                <input type="number" name="marks" id="marks" placeholder="Marks" required>
+                <br>
+                <br>
+                <label for="cgpa" placeholder="This field is optional">CGPA of Diploma</label>
+                <input type="number" name="cgpa_of_diploma" id="cgpa" ">
+                <br>
+                <br>
+                <label for="cgpa">Current CGPA of Degree</label>
+                <input type="number" name="cgpa" id="cgpa" placeholder="CGPA" required>
+                <br>
+                <br>
+                <label for="backlog">Total Number of Backlogs In Academics</label>
+                <input type="number" name="backlogs" id="backlog" placeholder="Backlogs" required>
+              
+                <input type="submit" value="Submit">
+            </form>
+
+        </div> 
+        <br>
+        <br>
+        <br>
+        <section class="sec_company">
+            <div>
+                <h2>Here are some information of top MNC'S</h2>
+                <h3>Click on Image to know more</h3>
+                <a href="/company_information/google.html"><img src="https://www.gamespot.com/a/uploads/original/1539/15391776/2919654-5611940169-Googl.png" alt="" width="300px"height="225px"></a>
+                <a href="/company_information/accenture.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAACfCAMAAABX0UX9AAAAz1BMVEX///8AAAC9AP/19fUvLy/b29v5+fnR0dFRUVHk5OQmJibx8fFlZWU1NTXIyMiPj48fHx+ZmZlvb2+1tbW8vLxMTEze3t7m5uavr6+oqKjmnf/V1dUYGBh0dHSfn58yMjJfX198fHxCQkIQEBBgYGD44/+FhYXRX/8/Pz8UFBSKioqTk5P99f8jIyNpaWnFJv/svv/23P/01P/77v/Xd//orf/OVf/fjP/xy//FMf/stP/OQ//bgv/jov/56P/kmv/Waf/PWf+3AP/Xcv/QSP+NYSnlAAAKJklEQVR4nO2aa3vaOBOGIcayscEcbDCuORmoQ6CQptts2/SQbbf//ze92NaM5AOJTXKVl2vn/pTAWB49kkajEbUaQRAEQRAEQRAEQRAEQRAEQfw3uXv/17lduGS+3368vzu3E5fLm19Xt39/+nxuNy6Vg3wHvlw/vDu3JxdJIl+k4Ke35/blAkH5DlzTNlIVWb6rq69v7mgRVyEt32ENf3v/lp3bqcvh/irL7fWbzzQFS/Lj+3VOwKuvHx8oCpaD/fj87Ut+Cv58pGS6JO9+3P+++pVV8MsjzcDSfMhPwZ+UCFbgr/t/0gpek3zV+PD4leQ7mXd3Dz9JvhN5+/DtNy3e03j3/tPP2/TO8Yu2jpLcvbnOp35XlLiU4d3DP7d57b480twrwdt/C7S7vX5/br8uhGzF5Sqq3X84t1cXQ1a+rx/vadWWJy3f349Uq6qEJN/tvw9Ua66IdFX0mRKVynD5fj/8oBL9CUTy3X6krfZEvl/9/P7j3E5cLh/o5wWvC8XAF9Ac2cq5fbhY/N583DfP7cVlojiT9bJeJ/lOQfEG43oEyXcKVp1D8p0CyfciSL4XcQHyKaZpPplVsecMnm0hMng+8WV5KyHfK+d9z/apFE27M9mv5qt9sHXcwtf4XtiPDXpO4QRg2jTotyKDqVVooFjT4PCKVj/0tJQ4TLUStKgfzOpNWvPWpGNBr5hvWVOQT3ciSz/+QuPPWay4qUO3wCL2yLSm4VR+teptEpeP9KkkWrDugn/L3SIc5iycVnsMBsagl3sZs1ezGzBo6NO8gac3ltxgPJuPpK/cya4RYSzUwzRbcbOlsU9EqjXnRmOH7hmRZSsSwRwYyXONJjbV500N4meVXtdILJzDf55u3NQXQj6r3+6KPm0LZ00J3BA6jj5O0xZDPWOwttMG2jxjsLDSBtYgYzBQ8btmi3+2U2s92WbnJN9nnz3MwVi+NvyLw90EP2ZaLF8HLOyaskocA/nMfabNmXfSedrPahMRyPHAXuYNttL8Yl6BgbxKlF7e4AZHAOVr+J2MkV9RPnfFP2ln5TO5sCCfZuRdDk+YgMPsxOHyiHgyGhcZ9ITA06Lv655Qb1sgb30HCxjlmwW7jM38leRbjjb8Ly6f1ShyOawcAVlY2Pd6G1efMys06DpoUNzCElpgXqH+uMBRvnE2iNTr1uvIN+6DbSKflm8yJhO0nsfCiWG0gnAvOhry2aVKs3NpdMU/Oh+q4Vo2kJSa8xY07Gajv51u99jGxE3LV0BQLN+g6uzrQjdj+dyJcLIz7QXYA8OvKB82NLdc03QddFVPWlJEMDc6jmZ5IlLy4BXgB7NtZIAtdBMD1scmHZfVmGuDBZ/AKflaPW86EWs40sn0tj10c73ZHojXfZXYh8TyjWAEd9PhwSNTQxcn1dRToKG1lnxgYctJ39QF9iRJxIa4Y82TB7ATCz9eGC7qN0kWCvYcVjOGg8DMyLdzTMaYaWG8mEXKMIVh2rx3maIo7GT51odHXXjhEvY3FydFtd3Dh8dC/oGJAxGHfubBvw3ovI9ex50XHqrZNvW4WzBxlj0cM4i37WFGPngHvtXgnxQd2irLp29GTvS5BTF2j2LZqV6XRlsPEjDO4zYaj4wJ/khbMW42cVzH0Ijq1AJQPJrACkSdthhYG7IGJy1fCO/Ah2CDerl8Xcz1FdiFb0TyrkBbq0ry5RmhHFFfVAhDYieuOUbCMno7rt1xUxh04+93bVvu+F68w1/I7xDy4WZeg2D+avJBcKpJK3UgbRT44Il3UYrpRjRxq4i7hklJS6ijOHZC9JEHC2Eu8kCTGziRAbYXuEMAN6g4O0f5uqKLmd3lxfKNxcjUVAjvcws9ciGid09InRXV8bZBf986gFtFLB8u5aC4LMG2YLA5Mmy4Z870AbCA9KaVkk9KG2CCvJZ8LUkVbGuHDg10CCc34jBZEtcO9Wy6D/JBmKh3ip/FXaB+7MRYfKjhzP+UfD3JO9wmiliKFVAOa19w/ONvZAH+V/ywiQajYoPakfw+IU69/4R8sne4rb+GfKPC0x/IB2nM8ph8uDbtYgP2/yGf7F3xEf00+Y7P5P+mfPVK8rnSg+NdlG7gofWVFi/m87tZI4ux/1OxT5YPF+8451Cj0a506sWtYamHI0s7gJ/E0Rbfvyl+Xmwd0+e2jmlTzRHvh39aPlxwfX+Yd6lK3sfQgwBcSKfNOFJy4uLGOmtW9AgmLqH0XldLiNTB1X20GPSK8jXLyIdtTV56a+dD0itOVGn58FVz6f4jTC4UutGMxFqeLnxRNsklRCNSTKTNx5x4uXyYq+GtwlPyYdqsV87xMuChAk9UokYQyzeEpKYhDm14PoziIR7apHzT5al3fGWCHR9IY+2PEqzUoe1k+dA3DdKIp+TDQ5shHUVM7pFdZUZiGMA6l5KOfeJCZYOrF68+Iq9djG0iOsIEnqVKBqI8fdhwuruIZVhZPun4oGCVE+KCqHc8JZ/oouhTbbSMPerOqhzaUL45fDLEIY3lE5MRhwqLv8v45eJUDlt+E6p1euwKDsAKB9aBOR2XhyrJJ5UuREauQ10bc9in5Ks5MKJiSZkwFIsK6olSPVxMiLohP+eo6OPOTqqfaJEEM1GK51318RCTzEcsl9b7ycgyBx6ZqWXlU/FOQXdcV02WWF+0HBUn5DutJ+XDcikOhii7VbrtcPGs2xg1D2550vktkY9JSeZg60332I8xD3bSXZN+MBC1T0ihxMVCe2v5mi163VHKyudKFyqRt/FGJp2+xnp/JR+fnpSvZosrm4mj+dYGHzWqbcbSgb67bqfuE/kp++hFTgcK3cfOFVv+Dn99xIDX28rIpwSpJ9dx+ax5pN36c/KJZD9LtWLzsUvGCChSWIvCr0UB0Coo10QGOJB28bG6McoM0BPyiXgVk8gnrV5oEsLC0/Klrg9ljpTljsKyHowHEECwxuMUzZ65dLgplEdKFJlXdFVseNzXUvJJd4t1lM/PvNjolEmbI0QEl5k0axXBPJ0T4iWeKJHlfsESnXfkRqy8MxP5Z0bMyS/wtg3tl5Kv5stOcPlqdnriT4fQ1HPy1Yap4YgZd06oNDdTPzOYKpgiSBVGt5cuCc68TIRtZgzWo6xBJ/MLgkDIiyPYFfKB3DciWVSlDs/40yy1MkYMs9BGIh9mePl6kDnKBKW5c9Lv/Jg24ROuGxw2U3+lJ9jy4dn15vj7Mz0rXmKAM3C8Kkrd3ekAw9diK89NszOIXzjYi7WzWSQfzaX6EdMCHgTaIfbU3fIFbISHp80Nb6ofv4B5g/j/gZ75wVfyXqePg25MrCq1gjRMdTzPeabYoKjOyBs56tExUvzE4GgzvAX/BSd1pakO3YwHwxLOH6Np2Z5nW6f+to8gCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgCIIgLp//Aaj40GnKlagZAAAAAElFTkSuQmCC" alt="" width="300px" height="225px"></a>
+                <a href="/company_information/microsoft.html"><img src="https://www.oneindia.com/img/2014/11/11-microsoft-logo.jpg" alt="" width="300px"></a>
+                <a href="/company_information/infosys.html"><img src="https://camunda.com/wp-content/uploads/2020/07/infosys_logo-768x440.png" alt="" width="300px" height="225px"></a>
+
+
+
+            </div>
+        </section>               
+       <footer class="footer",class="link_main">
+            <table class="link a">
+                
+                <tr>
+                    <th>Creaters</th>
+                    <th>Contact Us</th>
+                <!-- <th>Join Us on LInkedin</th> -->
+                </tr>
+                <tr>
+                    <td> Rushikesh Katkar</td>
+                    <td>+919146979348</td>
+                    <!-- <td  ><a href="https://www.linkedin.com/in/rushikesh-katkar-729094214" target="_blank">Click here</a></td> -->
+                </tr>
+                <tr>
+                    <td> Shubham Ghadge</td>
+                    <td> +917841088701</td>
+                    <!-- <td ><a href="https://www.linkedin.com/in/rushikesh-katkar-729094214"target="_blank">Click here</a></td> -->
+                </tr><tr>
+                    <td> Aman Sutar</td>
+                    <td> +917410139902</td>
+                    <!-- <td ><a href="https://www.linkedin.com/in/rushikesh-katkar-729094214"target="_blank">Click here</a></td> -->
+                </tr><tr>
+                    <td> Nishant Dhumal</td>
+                    <td>+918530387918</td>
+                    <!-- <td ><a href="https://www.linkedin.com/in/rushikesh-katkar-729094214"target="_blank">Click here</a></td> -->
+                </tr>
+            </table>
+       </footer>             
+</body>
+</html>

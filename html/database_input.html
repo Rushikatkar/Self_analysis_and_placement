@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Creation</title>
+</head>
+<style>
+    form{
+        width: 100%;
+        height: auto;
+        padding-left: auto;
+        padding-right: auto;
+        margin: auto;
+        margin-top: auto;
+    }
+    input[type="text"],[type="number"],[type="value"]{
+        width: 100%;
+        border-radius: 5px;
+    }
+    article{
+        width: 550px;
+        align-items: center;
+        padding: auto;
+        margin: auto;
+    }
+    
+    
+</style>
+<body>
+    <article>
+    <form method="POST" class="form">
+        <!-- <label for="">Company Name:</label> -->
+        <input type="text" name="cname" id="cname" placeholder="Company Name">
+        <!-- <label for="">12th Marks:</label> -->
+        <input type="number" name="marks" id="12marks" placeholder="12th Marks">
+        <!-- <label for="">CGPA:</label> -->
+        <input type="value" name="cgpa" id="cgpa" placeholder="CGPA">
+        
+        <!-- <label for="">Total number of backlogs</label> -->
+        <input type="number" name="backlog" id="backlog" placeholder="Total number of backlogs">
+        <!-- <label for="">Branch name:</label>
+        <input type="text" name="branchname" id="branchname"> -->
+        <input type="submit" value="Submit" id="submit">
+        <input type="submit" value="clear" id="clear">
+    </form>
+</article>
+</body>
+<script>
+    var cname=document.getElementById("cname");
+    if(cname=" "){
+        document.getElementById("cname").style.bordercolor='red';
+    }
+document.getElementById("clear").clear();
+    
+</script>
+</html>

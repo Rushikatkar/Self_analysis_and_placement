@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Companies</title>
+</head>
+<style>
+    table{
+        margin: auto;
+        overflow: hidden;
+        position: inherit;
+        width: 50%;
+        text-align: center;
+        background-color:rgb(130, 227, 197);
+        border-radius: 10px;
+        border: "1px";
+        border-color:"1px solid black";
+    }
+    .heading{
+        text-align: center;
+        color: white;
+    }
+    body{
+        text-align: center;
+        background-color:dimgrey;
+        margin: 10px;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    
+    <h2 class="heading">Profile</h2>
+    
+    <table >
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>marks</th>
+            <th>cgpa</th>
+            <th>backlogs</th>
+            <th>Domain</th>
+        </tr>
+        <% if(profiledata.length > 0){ %>
+            <% for(var i=0; i<profiledata.length; i++){ %>
+                <tr>
+                    <td> <%- profiledata[i].name %> </td>
+                    <td><%- profiledata[i].email %> </td>
+                    <td><%- profiledata[i].marks %> </td>
+                    <td><%- profiledata[i].cgpa %> </td>
+                    <td><%- profiledata[i].backlogs %> </td>
+                    <td><%- profiledata[i].domain %> </td>
+                </tr>
+                <% } %>
+            <% }else{ %>
+                <h1>You have to build your profile first</h1>
+                <% } %>
+                <tr>
+                    
+                    
+                </tr>       
+    </table>
+<h1></h1>
+    <table >
+        <tr>
+            <th>Company name</th>
+            <th>Company link</th>
+        </tr>
+        <% if(profiledata.length > 0){ %>
+            <% for(var i=0; i<profiledata.length; i++){ %>
+                <tr>
+                    <td> <%- profiledata[i].company_name %> </td>
+                    <td><%- profiledata[i].company_link %> </td>
+                </tr>
+                <% } %>
+            <% }else{ %>
+                <h1>You are not eligible for any Company</h1>
+                <% } %>
+                <tr>
+                    
+                    
+                </tr>       
+    </table>
+</body>
+</html>

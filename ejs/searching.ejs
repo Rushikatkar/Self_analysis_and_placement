@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<style>
+    body{
+        background-color:whitesmoke;
+
+    }
+    form{
+        text-align: center;
+        background-color:dimgrey;
+       margin-top: 10px;
+        padding: 2rem;
+        
+    }
+    input[type=search]{
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    input[type=submit]{
+        padding: 10px;
+        background-color:skyblue;
+        border-radius: 5px;
+        border: none;
+    }
+    table{
+        margin: auto;
+        overflow: hidden;
+        position: inherit;
+        width: 50%;
+        text-align: center;
+        background-color:rgb(130, 227, 197);
+        border-radius: 10px;
+        border: "1px";
+        border-color:"1px solid black";
+    }
+    .heading{
+        text-align: center;
+    }
+    .main{
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+       
+    }
+    .navbar{
+        width: 100%;
+        height: 75px;
+        margin: auto;
+        background-color:dimgrey;
+    }
+    .icon{
+        width: 200px;
+        float: left;
+        height: 70px;
+    }
+    .logo{
+    
+        color: white;
+        font-size: 25px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        margin-right:80px;
+        padding-top: 10px;
+        margin-top: 10px
+      }
+      *{
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+        width: 700px;
+        float: right;
+        height: 70px;
+        text-emphasis-color: black;
+        justify-content: center;
+        
+    }
+    ul{
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    ul li{
+        list-style: none;
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+    }
+    ul li a{
+        text-decoration: none;
+        color:black;
+        font-family: Arial;
+        font-weight: bold;
+        transition: 0.4s ease-in-out;
+    }
+    ul li a:hover{
+        color: #ff7200;
+    }
+    .link_main{
+        color: white;
+        text-decoration: none;
+    }
+</style>
+<body>
+    <div class="navbar">
+        <div class="icon">
+            <h3 class="logo" behavior="scroll" direction="LEFT" scrollamount="1"> <a href="/sap" class="link_main">SELF&nbsp;ANALYSIS&nbsp;&amp;&nbsp;PLACEMENT</a></h3>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <!-- <li><a href="/sap">HOME</a></li> -->
+                <!-- <li><a href="#">CONTACTS</a></li> -->
+                <li><a href="/login" style="color: white;">LOGIN</a></li>
+                         <li><a href="/Profile"style="color: white;">REGISTER</a></li>
+                         <!-- <li><a href="/signup"style="color: white;">REGISTER</a></li> -->
+                         <li><a href="/searching"style="color: white;">SEARCH COMPANY</a></li>
+            </ul>
+        </div>
+       
+
+    </div> 
+    <form onsubmit="return searching()">
+        <div >
+            <input class="srch" type="search" name="company name" id="company_name" placeholder="Type to search..." onkeyup="searching()">
+            <!-- <a href="#"> <button class="btn">Search</button></a> -->
+            <input class="btn" type="submit" value="Search">
+        </div>
+    </form>
+
+    <h1 class="heading">Company List</h1>
+       <table    >
+        <tr>
+             <th>company_name</th>
+             <th>marks</th>
+             <th>cgpa</th>
+             <th>backlogs</th>
+             <th>company_link</th>
+         </tr>
+         <% if(students.length > 0){ %>
+            <% for(var i=0; i<students.length;i++){ %>
+                <tr class="tr">
+                    <td><%- students[i].company_name %></td>
+                    <td><%- students[i].marks %></td>
+                    <td><%- students[i].cgpa %></td>
+                    <td><%- students[i].backlogs %></td>
+                    <td><a href="https://careers.google.com"><%- students[i].company_link %></a></td>
+                </tr>
+
+                <%}%>
+                <%}else{%>
+                    <tr>
+                        <td>Data Not Found</td>
+                    </tr>
+                 <%}%>   
+       </table>
+       
+</body>
+</html>
+<script>
+    function searching()
+    {
+        document.querySelectorAll(".tr").forEach(function(ele){
+            ele.remove()
+        });
+
+        var table = document.getElementsByTagName("table")[0];
+
+        var company_name= document.getElementById("company_name").value;
+
+        var req = new XMLHttpRequest();
+
+        req.open("get","/searching-company?company_name="+company_name);
+        req.send();
+
+        req.onreadystatechange = function(){
+            if(req.readyState == 4 && req.status == 200){
+                var obj = JSON.parse(req.responseText);
+                if(obj.length>0){
+                    for(let i=0;i<obj.length;i++){
+                        table.innerHTML +="<tr class='tr'><td>"+obj[i]['company_name']+"</td><td>"+obj[i]['marks']+"</td><td>"+obj[i]['cgpa']+"</td><td>"+obj[i]['backlogs']+"</td><td>"+obj[i]['company_link']+"</td></tr>";
+                    }
+                }else{
+                    table.innerHTML +="<tr class='tr'><td colspan='5'>Data Not Found</td></tr>";
+                }
+            }
+        };
+        return false;
+    }
+</script>
